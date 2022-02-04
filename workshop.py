@@ -5,7 +5,7 @@ from transformers import pipeline
 import os
 
 def app():
-
+    st.text("Le meilleur workshop de l'année !!")
     sentence = st.text_input('Fill in the sentence you want to try then press enter:', 'Data science is [MASK].')
     unmasker = pipeline('fill-mask', model='distilbert-base-uncased')
     if "[MASK]" in sentence:
