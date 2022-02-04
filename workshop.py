@@ -23,6 +23,7 @@ def app():
             u"table_results": result
         }
         db.collection("posts").document(sentence).set(data)
+        st.balloons()
 
 if __name__ == '__main__':
 
