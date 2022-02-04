@@ -7,7 +7,7 @@ import os
 
 
 def app():
-    
+    st.balloons()
     db = firestore.Client.from_service_account_info(st.secrets["gcp_service_account"])
     st.text("Le meilleur workshop de l'année !!")
     sentence = st.text_input('Fill in the sentence you want to try then press enter:', 'Data science is [MASK].')
@@ -19,11 +19,12 @@ def app():
         st.warning("The sentence needs to contains [MASK]")
         
     if st.button("Store result in the database"):
+        st.balloons()
         data = {
             u"table_results": result
         }
         db.collection("posts").document(sentence).set(data)
-        st.balloons()
+    
 
 if __name__ == '__main__':
 
