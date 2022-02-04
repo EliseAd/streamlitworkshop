@@ -7,6 +7,7 @@ import os
 
 
 def app():
+    st.markdown("![Alt Text](https://media.giphy.com/media/z0ImSbMh4uJR4BEJju/giphy.gif)")
     db = firestore.Client.from_service_account_info(st.secrets["gcp_service_account"])
     st.text("Le meilleur workshop de l'année !!")
     sentence = st.text_input('Fill in the sentence you want to try then press enter:', 'Data science is [MASK].')
