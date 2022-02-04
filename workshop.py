@@ -24,6 +24,7 @@ def app():
         }
         db.collection("posts").document(sentence).set(data)
         st.success('Well Done !! ')
+        st.markdown("https://media.giphy.com/media/1APaqOO5JHnWKLc7Bi/giphy.gif)")
     
 
 if __name__ == '__main__':
